@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+<form name="Calc">
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" name="Input" size="16"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="one" value="  1  " onClick="Calc.Input.value += '1'"></td>
+            <td><input type="button" name="two" value="  2  " onClick="Calc.Input.value += '2'"></td>
+            <td><input type="button" name="three" value="  3  " onClick="Calc.Input.value += '3'"></td>
+            <td><input type="button" name="plus" value="  + " onClick="Calc.Input.value += ' + '"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="four" value="  4  " onClick="Calc.Input.value += '4'"></td>
+            <td><input type="button" name="five" value="  5  " onClick="Calc.Input.value += '5'"></td>
+            <td><input type="button" name="six" value="  6  " onClick="Calc.Input.value += '6'"></td>
+            <td><input type="button" name="minus" value="  -  " onClick="Calc.Input.value += ' - '"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="seven" value="  7  " onClick="Calc.Input.value += '7'"></td>
+            <td><input type="button" name="eight" value="  8  " onClick="Calc.Input.value += '8'"></td>
+            <td><input type="button" name="nine" value="  9  " onClick="Calc.Input.value += '9'"></td>
+            <td><input type="button" name="times" value="  x  " onClick="Calc.Input.value += ' * '"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="clear" value=" CE " onClick="Calc.Input.value = ''"></td>
+            <td><input type="button" name="zero" value="  0  " onClick="Calc.Input.value += '0'"></td>
+            <td><input type="button" name="comma" value="  ,   " onClick="Calc.Input.value += '.'"></td>
+            <td><input type="button" name="div" value="  /  " onClick="Calc.Input.value += ' / '"></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="button" name="DoIt" value="          TOTALE           " onClick="Calc.Input.value = eval(Calc.Input.value).toFixed(2)"></td>
+            <td></td>
+        </tr>
+    </table>
+    
+
+</form>
+</body>
+</html>
