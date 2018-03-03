@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BMI Calculator</title>
+<script type="text/javascript" src="BMI Calculator.js">
+for(var line=1;line<60;line++)
+	{
+	for(var i=1;i <29;i++)
+		{
+		var s=(Math.floor(Math.random()*2)%2) ? "/":"\";
+		documents.write(s);
+		}
+	documents.writeln("<br>");
+	}
+
+</script>
+
+</head>
+<body>
+<form name="bmiForm">
+Your weight(kg):<input type="text" name="weight" size="10"/><br/>
+Your height(cm):<input type="text" name="height" size="10"/><br/>
+<input type="button" value="Calculate BMI" onclick="calculateBMI()"/><br>
+Your BMI :<input type="text" name="bmi" size="10"/><br>
+This means:<input type="text" name="meaning" size="25"><br>
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>
