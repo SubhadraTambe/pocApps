@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>myAjs</title>
+<script src="js/angular.min.js"></script>
+<script src="js/appModel.js"></script>
+<script src="js/myController.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/myAjs/style.css"></link>
+</head>
+<body ng-app="myapp" ng-controller="ctrl">
+<div id="container">
+<hr>Login Page</hr><br>
+<form action="Next.html" ng-submit="fun1($event)">
+<label for="uname">Username </label><input name="uname" ng-model="un"></input>
+<div style="color :red">{{msg1}}</div><br>
+<label for="pwd">Password</label><input type="password" name="pwd" ng-model="pw"></input>
+<div>{{msg2}}</div>
+<div id="lower">
+<input type="checkbox"><label for="checkbox">Keep me logged in</label>
+<input type="submit" value="login"></input>
+</div>
+</form>
+</div>
+</body>
+</html>
