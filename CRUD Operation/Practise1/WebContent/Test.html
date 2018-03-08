@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Show the Records</title>
+<script src="js/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<h1 ng-repeat="x in records">{{x}}</h1>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+  $scope.records = [
+    "Great Wall of China (China) ",
+    "Christ the Redeemer Statue (Rio de Janeiro)",
+    "Machu Picchu (Peru)",
+    "Chichen Itza (Yucatan Peninsula, Mexico)",
+    "The Roman Colosseum (Rome)",
+    "Taj Mahal (Agra, India)"
+  ]
+});
+</script>
+</body>
+</html>

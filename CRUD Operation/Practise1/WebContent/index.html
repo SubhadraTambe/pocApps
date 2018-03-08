@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CRUD Operation</title>
+<script src="js/angular.min.js"></script>
+<style>
+table,th,td{
+          border: 1px;
+          border-collapse :collapse;
+          padding :5px;
+         }
+table tr:nth-child(odd){
+          background-color :#f1f1f1;
+           }       
+table tr:nth-child(even){
+          background-color :#ffffff;
+          }             
+</style>
+
+</head>
+<body>
+<script>
+      var app=angular.module("myapp",[]);
+      app.controller('empCtrl',['$scope',function($scope){
+    	         
+     $scope.employee=[
+    	        	 {
+    	        	 EId :111,
+    	             Name :'Ketan',
+    	             State :'MH',
+    	             Age :20
+    	        	 },
+    	        	 
+    	        	 {
+        	        	 EId :222,
+        	             Name :'Rohan',
+        	             State :'TL',
+        	             Age :20
+        	        	 },
+    	        	 {
+        	        	 EId :333,
+        	             Name :'Rushi',
+        	             State :'UP',
+        	             Age :20
+        	        	 },
+    	        	 {
+        	        	 EId :444,
+        	             Name :'Mahesh',
+        	             State :'MH',
+        	             Age :21
+        	        	 },
+    	        	 {
+        	        	 EId :555,
+        	             Name :'Akash',
+        	             State :'BL',
+        	             Age :22
+        	        	 }
+    	        	 
+    	        	 ];
+     
+     $scope.copy = function(index, data) {
+         var newRow = angular.copy(data);
+         $scope.employee.push(newRow);
+         
+       }
+     
+     $scope.delete = function(index) {
+         $scope.employee.splice(index, 1);
+       
+       }
+     
+     $scope.update = function(index, data) {
+         alert(JSON.stringify(data));
+         
+       }
+	
+	
+	
+}]);
+         
+      
+</script>
+<div ng-app="myapp" ng-controller="empCtrl">
+
+<table>
+ <tr>
+      <td>Index</td>
+     <td>EId</td>
+     <td>Name</td>
+     <td>State</td>
+     <td>Age</td>
+</tr> 
+
+<tr ng-repeat="emp in employee">
+      <td>{{$index+1}}</td>
+     <td>{{emp.EId}}</td>
+     <td>{{emp.Name}}</td>
+     <td>{{emp.State}}</td>
+     <td>{{emp.Age}}</td>
+     <td><input type="button" value="Copy" data-ng-click="copy($index,emp)"/></td>
+     <td><input type="button" value="Delete" data-ng-click="delete($index,emp)"/></td>
+     <td><input type="button" value="Update" data-ng-click="update($index,emp)"/></td>
+     
+
+</tr>
+
+</table>
+
+</div>
+</body>
+</html>
